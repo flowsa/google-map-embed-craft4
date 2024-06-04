@@ -1,0 +1,25 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * GoogleMapEmbed plugin for Craft CMS 3.x
+ *
+ * GoogleMapEmbed Field Input
+ *
+ * @author    Flow Communications
+ * @copyright Copyright (c) 2018 Flow Communications
+ * @link      https://www.flowsa.com
+ * @package   GoogleMapEmbed
+ * @since     0.0.1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+        instructions: 'Enter the name of a place, a street address or Lat/Lng co-ordinates.',
+        id: name,
+        name: name,
+        value: value})
+}}
+
+<iframe id="map_{{ name }}" data-src="https://www.google.com/maps/embed/v1/place?key={{ field.apiKey }}&q=" src="" frameborder="0" style="width: 600px; height: 400px; border: 1px solid rgba(0, 0, 20, 0.1)"></iframe>

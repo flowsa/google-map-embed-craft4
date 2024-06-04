@@ -1,0 +1,26 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * GoogleMapEmbed plugin for Craft CMS 3.x
+ *
+ * GoogleMapEmbed Settings.twig
+ *
+ * @author    Flow Communications
+ * @copyright Copyright (c) 2018 Flow Communications
+ * @link      https://www.flowsa.com
+ * @package   GoogleMapEmbed
+ * @since     0.0.1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("flowsa\\googlemapembed\\assetbundles\\googlemapembed\\GoogleMapEmbedAsset") %}
+
+{{ forms.textField({
+    label: 'API Key',
+    instructions: 'Enter your Maps Embed API key',
+    id: 'apiKey',
+    name: 'apiKey',
+    value: settings['apiKey']})
+}}
