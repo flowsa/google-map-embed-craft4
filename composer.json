@@ -2,7 +2,7 @@
     "name": "flowsa/google-map-embed",
     "description": "A simple Google Map embed",
     "type": "craft-plugin",
-    "version": "0.0.1",
+    "version": "0.0.5",
     "keywords": [
         "craft",
         "cms",
